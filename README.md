@@ -36,10 +36,10 @@ These are the groups/institute that can use/implement this tool according to the
 ![News Section](/images/client.png?raw=true "Architecture")
 
 
-## TECH STACK
-#### FRONTEND
+# :pencil2:TECH STACK
+### :round_pushpin:FRONTEND
 :heavy_check_mark: Simplified using HTML, CSS, JS
-### BACKEND
+### :round_pushpin:BACKEND
 :heavy_check_mark: Written in ExpressJS framework and templates
 
 :heavy_check_mark: Powered by NodeJS
@@ -50,8 +50,7 @@ These are the groups/institute that can use/implement this tool according to the
 
 :heavy_check_mark: Enhanced by ACE editor open sourced JS editor 
 
-# RUN THE PROJECT 
-### Usage
+# ✏️RUN THE PROJECT 
 ```sh
 > git clone <repo link>
 $ npm init
