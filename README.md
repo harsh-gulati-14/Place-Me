@@ -33,4 +33,4 @@ These are the groups/institute that can use/implement this tool according to the
 # :round_pushpin: ERD Diagram
 ![News Section](/images/erd.JPG?raw=true "ERD")
 # :round_pushpin: Architecture Diagram
-![News Section](/images/Client-Server-Architecture.png?raw=true "Architecture")
+![News Section](/images/client.png?raw=true "Architecture")
