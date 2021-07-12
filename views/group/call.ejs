@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <% include ../partials/header %>
+
+    <title>Send Invite</title>
+
+    <!-- Custom CSS: common.css -->
+    <link rel="stylesheet" href="/css/common.css">
+
+    <!-- Custom JS: common.js -->
+    <script src="/js/common.js"></script>
+    <script src='https://meet.jit.si/external_api.js'></script>
+    <script>
+        $(document).ready(function(){
+        const domain = 'meet.jit.si';
+    const options = {
+    roomName: 'PickAnAppropriateMeetingNameHere',
+    width: 700,
+    height: 700,
+    parentNode: document.querySelector('#meet')
+};
+const api = new JitsiMeetExternalAPI(domain, options);
+});
+    </script>
+
+</head>
+
+<body>
+
+<% include ../partials/sidebar %>
+
+<!-- MAIN NEW GROUP PAGE HERE -->
+<div id="main">
+    <!-- Create new Group Heading -->
+    <nav class="container black" id="round-heading" style="margin-bottom: 20px">
+        <h2 class="center">
+            Send Invite
+        </h2>
+    </nav>
+
+    <!-- New Group Form Container -->
+    <div class="container">
+        <!-- Success Alerts -->
+        
+
+        <div class="col s2" id="meet">
+            <button class="btn">Send</button>
+        </div>
+    </div>  <!-- End of Create Group Container -->
+    
+
+</div>  <!-- END OF MAIN PAGE -->
+
+</body>
+</html>

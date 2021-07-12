@@ -1,0 +1,106 @@
+/* CHANGE PAGE FONT TO LOBSTER */
+body {
+    font-family:'Lobster', cursive;
+}
+
+/* CHANGE FONT OF BUTTONS TO ROBOTO */
+.btn {
+    font-family: "Roboto", sans-serif;
+}
+
+/* CHANGE FONT OF INPUTS TO ROBOTO */
+input {
+    font-family: "Roboto", sans-serif;
+}
+
+
+
+/* HOME PAGE */
+#home {
+    height:90vh;
+    background: url("../img/business.jpg") center;
+    background-size: cover;
+    padding-top: 2vh;
+}
+
+/* CONTAINER HAVING PAGE HEADING AND BUTTON */
+#heading-container {
+    max-width:620px;
+    padding-top: 200px;
+}
+
+/* PAGE HEADING */
+#heading {
+    background: green;
+    padding:25px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px black;
+}
+
+#heading h1 {
+    margin:10px;
+}
+
+
+
+/* WHY CHITCHAT PAGE */
+#why {
+    min-height:100vh;
+    background-color: #e5ff00;
+    padding-top:100px;
+    padding-bottom: 50px;
+}
+
+/* ALL FEATURES */
+.features {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* ADDING MARGIN TOP TO ALERTS */
+#alert-message {
+    margin-top: 10px;
+}
+
+/* PAGE FOOTER */
+footer.page-footer {
+    width:100%;
+    position: fixed;
+    bottom:0;
+    padding-top: 0;
+}
+
+
+
+
+/* MEDIA QUERIES */
+
+/* Large, Extra Large Screens */
+@media (min-width: 992px) {
+    /* Give margin and Padding to Login, SignUp Containers  */
+    #login-container, #signup-container {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding-left:50px;
+        padding-right:50px;
+    }
+
+    /* Give Left Border to SignUp Container */
+    #signup-container {
+        border-left:2px solid green ;
+    }
+}
+
+/* Small, Medium Screens */
+@media (max-width: 991px) {
+    /* Give Padding to Login, SignUp Containers  */
+    #login-container, #signup-container {
+        padding:50px;
+    }
+
+    /* Give Top Border to SignUp Container */
+    #signup-container {
+        border-top:2px solid green /*#66BB6A*/;
+    }
+}

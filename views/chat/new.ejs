@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <% include ../partials/header %>
+
+    <title>New Chat</title>
+    <link rel="stylesheet" href="/css/all.css">
+    <!-- Custom CSS: common.css -->
+    <link rel="stylesheet" href="/css/common.css">
+
+    <!-- Custom JS: common.js -->
+    <script src="/js/common.js"></script>
+
+</head>
+
+<body>
+
+<% include ../partials/sidebar %>
+
+<!-- MAIN NEW CHAT PAGE HERE -->
+<div id="main">
+    <!-- Chats Heading -->
+    <nav class="container black" id="round-heading" style="margin-bottom: 20px">
+        <h2 class="center">
+            Add Chat
+        </h2>
+    </nav>
+
+    <!-- Search Container -->
+    <div class="container">
+        <!-- Success Alerts -->
+        <% if(success && success.length > 0) { %>
+        <div id="alert-message" class="ui positive message">
+            <p><%= success %></p>
+        </div>
+        <% } %>
+        <!-- Error Alerts -->
+        <% if(error && error.length > 0) { %>
+        <div id="alert-message" class="ui error message">
+            <p><%= error %></p>
+        </div>
+        <% } %>
+
+        <form action="/chats" method="POST">
+            <div class="row">
+                <!-- Input Box -->
+                <div class="col s10">
+                    <input id="user-search" name="username" class="input-field" type="text" placeholder="Search By Username">
+                </div>
+                <!-- Search Button -->
+                <div class="col s2">
+                    <button class="btn">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>  <!-- End of Search Container -->
+
+</div>  <!-- END OF MAIN PAGE -->
+
+</body>
+</html>

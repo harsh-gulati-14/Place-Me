@@ -1,0 +1,40 @@
+/* CHATS HEADING */
+#chats-heading {
+    margin-bottom:5px;
+    padding-bottom: 5px; 
+}
+
+h2 {
+    margin: 0;
+}
+
+/* ALL CHAT ROWS */
+.chat-row {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 5px;
+}
+/* ADD BOX SHADOW AND TRANSLATE ON HOVER */
+.chat-row:hover {
+    box-shadow: 5px 5px 10px black;
+    transform: translate(-5px, -5px);
+}
+/* REMOVE BOX SHADOW AND TRANSLATE ON CLICK */
+.chat-row:active {
+    box-shadow: none;
+    transform: translate(5px, 5px);
+}
+
+.chat-name {
+    margin:5px;
+}
+
+span.badge.new {
+    font-size: 1.5rem;
+    font-weight: 500;
+    height: 36px;
+    min-width: 5rem;
+    padding: 6px
+}

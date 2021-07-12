@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- REQUIRED METATAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+
+    <!-- TITLE -->
+    <link rel="shortcut icon" type="image/x-icon" href="/img/coding.png" />
+    <title>PlaceMe</title>
+
+    <!-- REQUIRED LINKS -->
+    <!-- Materialize -->
+    <link rel="stylesheet" href="/css/materialize.css">
+    <link rel="stylesheet" href="/css/materialize.css">
+    <!-- SEMANTIC UI: message.css -->
+    <link rel="stylesheet" href="/css/message.css">
+    <!-- Lobster Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Custom CSS(main.css) -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- REQUIRED SCRIPTS -->
+    <!-- Jquery -->
+    <script src="/js/jquery-3.2.1.js"></script>
+    <!-- Materialize -->
+    <script src="/js/materialize.js"></script>
+    <!-- Custom JS(main.js) -->
+    <script src="/js/main.js"></script>
+
+</head>
+
+<body>
+
+<!-- MAIN HEADER WITH NAVBAR -->
+<header>
+    <!-- NAVBAR -->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper black">
+                <div class="container">
+                    <!-- BRAND LOGO AND NAME -->
+                    <a href="#" class="brand-logo">
+                        <i class="fa fa-code"></i>
+                        PlaceMe
+                    </a>
+                    <!-- LINKS TO VARIOUS SECTIONS -->
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#home">Home</a></li>
+                        <% if(user) { %>
+                            <li><a href="/chats"><%= user.username %>'s Chats</a></li>
+                        <% } else { %>
+                            <li><a href="#login-signup" id="login-signup-btn">Login</a></li>
+                            <li><a href="#login-signup" id="login-signup-btn">SignUp</a></li>
+                        <% } %>
+                    </ul>
+                    <!-- MENU BARS ICON FOR MOBILES -->
+                    <a href="#" data-activates="toggle-menu" class="button-collapse"><i
+                            class="fa fa-bars fa-2x"></i></a>
+                </div>
+            </div>  <!-- NAV-WRAPPER END -->
+        </nav>
+    </div>  <!-- NAVBAR-FIXED END -->
+    <!-- SLIDE MENU FOR MOBILES -->
+    <ul class="side-nav" id="toggle-menu">
+        <li><a href="#home">Home</a></li>
+        <% if(user) { %>
+            <li><a href="/chats"><%= user.username %>'s Chats</a></li>
+        <% } else { %>
+            <li><a href="#login-signup">Login/SignUp</a></li>
+        <% } %>
+    </ul>
+
+</header>
+
+
+<!-- MAIN PAGE -->
+<main>
+    <!-- HOME PAGE -->
+    
+    <div id="home" class="scrollspy">
+        
+        <div id="heading-container" class="container">
+            <!-- CONTAINER FOR HEADING AND CHATTING BUTTON -->
+            <div id="heading" class="row center-align">
+                <!-- MAIN HEADING WITH LOGO-->
+                <h1 class="white-text">
+                    <i class="fa fa-code"></i>
+                    PlaceMe
+                </h1>
+                <!-- BUTTON TO LOGIN/SIGNUP -->
+                <% if(user) { %>
+                    <a href="/chats" class="btn  black">Start Coding</a>
+                <% } else { %>
+                    <a href="#login-signup" class="btn black">Start Coding</a>
+                <% } %>
+            </div>
+        </div>
+    </div>  <!-- HOME PAGE END -->
+
+    <% if(!user) { %>
+        <!-- LOGIN/SIGNUP PAGE -->
+        <div id="login-signup" class="scrollspy center-align" style="margin-top: 30px">
+            <div class="container">
+                <!-- Success Alerts -->
+                <% if(success && success.length > 0) { %>
+                <div id="alert-message" class="ui positive message">
+                    <p><%= success %></p>
+                </div>
+                <% } %>
+                <!-- Error Alerts -->
+                <% if(error && error.length > 0) { %>
+                <div id="alert-message" class="ui error message">
+                    <p><%= error %></p>
+                </div>
+                <% } %>
+                <!-- EACH LOGIN, SIGNUP TAKES HALF SPACE ON LARGE SCREENS -->
+                <!-- FULL SPACE ON SMALL SCREENS -->
+                <div class="row">
+                    <!-- LOGIN CONTAINER -->
+                    <div id="login-container" class="col s12 l6">
+                        <!--HEADING-->
+                        <h3>Login &nbsp;&nbsp;<i class="fa fa-sign-in"></i></h3>
+                        <!-- LOGIN FORM -->
+                        <div class="row">
+                            <form action="/login" method="POST" class="col s12">
+                                <!-- USERNAME -->
+                                <div class="input-field">
+                                    <i class="fa fa-user prefix"></i>
+                                    <input name="username" id="login-username" type="text" class="validate" required>
+                                    <label for="login-username">UserName</label>
+                                </div>
+                                <!-- PASSWORD -->
+                                <div class="input-field">
+                                    <i class="fa fa-key prefix"></i>
+                                    <input name="password" id="login-password" type="password" class="validate" required>
+                                    <label for="login-password">Password</label>
+                                </div>
+                                <!-- LOGIN BUTTON -->
+                                <button id="login-button" class="btn black">Login</button>
+                            </form>
+                        </div>
+                    </div>  <!-- LOGIN CONTAINER END -->
+                    <div id="signup-container" class="col s12 l6">
+                        <!-- HEADING -->
+                        <h3>SignUp &nbsp;&nbsp;<i class="fa fa-user-plus"></i></h3>
+                        <!-- SIGNUP FORM -->
+                        <div class="row">
+                            <form action="/signup" method="post" class="col s12">
+                                <div class="row">
+                                    <!-- FIRST NAME -->
+                                    <div class="input-field col s6">
+                                        <input id="signup-first-name" name="firstName" type="text" class="validate" required>
+                                        <label for="signup-first-name">First Name</label>
+                                    </div>
+                                    <!-- LAST NAME -->
+                                    <div class="input-field col s6">
+                                        <input id="signup-last-name" name="lastName" type="text" class="validate" required>
+                                        <label for="signup-last-name">Last Name</label>
+                                    </div>
+                                </div>
+                                <!-- EMAIL ADDRESS -->
+                                <div class="input-field">
+                                    <i class="fa fa-envelope prefix"></i>
+                                    <input id="signup-email" name="email" type="email" class="validate" required>
+                                    <label for="signup-email" data-error="Invalid Email!">Email</label>
+                                </div>
+                                <!-- USERNAME -->
+                                <div class="input-field">
+                                    <i class="fa fa-user prefix"></i>
+                                    <input id="signup-username" name="username" type="text" class="validate" required>
+                                    <label for="signup-username">User Name</label>
+                                </div>
+                                <!-- PASSWORD -->
+                                <div class="input-field">
+                                    <i class="fa fa-key prefix"></i>
+                                    <input id="signup-password" name="password" type="password" minlength="8" class="validate" required>
+                                    <label for="signup-password" data-error="Minimum 8 Length Password Required">Password</label>
+                                </div>
+                                <!-- SIGNUP BUTTON -->
+                                <button id="signup-button" class="btn black submit">SignUp</button>
+                            </form>
+                        </div>  <!-- SIGNUP FORM END -->
+                    </div>
+                </div>
+        </div>  <!-- LOGIN/SIGNUP PAGE END -->
+    <% } %>
+
+</main> <!-- MAIN PAGE END -->
+
+<!-- PAGE FOOTER -->
+<footer class="page-footer black">
+    <div class="container center-align">
+        Made by<a href="https://www.linkedin.com/in/harsh-gulati-005585ab/"> HARSH GULATI</a> 
+        <br> Aim-> Write a Code that can help millions of people <br>Click Here to See <a href="https://drive.google.com/file/d/1MNv3rz-jA__m1ui8Lk8_uZZZkYZ-m190/view?usp=sharing">Resume</a>
+    </div>
+</footer>
+
+
+<!-- Scroll to Login-SignUp if Flash Message present -->
+<% if((success && success.length>0) || (error && error.length>0)) { %>
+    <script>
+        $(function(){
+            $("#login-signup-btn").click();
+        });
+    </script>
+<% } %>
+
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!-- SIDEBAR CONTAINING USER'S DATA -->
+
+
+<div class="nav-wrapper">
+  <div class="side-nav-button">
+      <a id="sidebar-nav" href="#">
+      <i class="fa fa-chevron-right" style="margin-top: 9px;"></i>
+      <i class="fa fa-chevron-left" style="margin-top: 9px;display: none"></i>
+      </a>
+  </div>
+</div>
+  
+
+<div id="profile-sidebar" class="side-nav fixed white sidr left z-depth-3" style="display: none;">
+
+   <ul style="margin: 0;">
+        <li>
+          <div class="user-view" style="background-color:black;" >
+            <div class="background">
+              <img src="/img/sidebar.jpg" />
+            </div>
+            <!--<a href="#!user">
+              <img class="circle" src="/assets/user-9c35b310e18aa1be9f12ba5ce1c673b64b01ab671938f7a50351f6b9fd008bd2.png" />
+            </a>-->
+            <a><span class="white-text name"><%= user.name.toUpperCase() %></span>
+            </a>
+            <a><span class="white-text email" id="username" data-username="<%= user.username %>" ><%= user.username %></span>
+            </a>
+          </div>
+        </li>
+        <li>
+          <a href="/brod" >
+                Spotlight
+                &nbsp;<i class="fa fa-podcast"></i>
+           </a>
+        </li>
+          <li>  
+            <a href="/compiler">
+                  Editor
+                  &nbsp;<i class="fa fa-pencil-square-o "></i>
+            </a>
+          </li>
+
+          <li>  
+            <a href="/chats">
+                  Recent Chats
+                  &nbsp;<i class="fa fa-commenting-o"></i>
+              </a>
+          </li>
+
+          <li>
+            <a href="/chats/new"  >
+                  Add Chat
+                  &nbsp;<i class="fa fa-plus-square-o"></i>
+              </a>
+          </li>
+          <li>
+            <a href="/groups/join" >
+                  Join a Group
+                  &nbsp;<i class="fa fa-users"></i>
+              </a>
+          </li>
+          <li>
+            <a href="/groups/new" >
+                  Create a Group
+                  &nbsp;<i class="fa fa-pencil"></i>
+             </a>
+          </li>
+          <li>
+            <a href="/groups/invite" >
+                  Invite a User
+                  &nbsp;<i class="fa fa-bell-o"></i>
+             </a>
+          </li>
+          <!-- <li>
+            <a href="/groups/call" >
+                  Video Call
+                  &nbsp;<i class="fa fa-pencil"></i>
+             </a>
+          </li> -->
+          <li><div class="divider"></div></li>
+          <li>
+               <a href="/logout"  >
+                  Logout
+                  &nbsp;<i class="fa fa-sign-out"></i>
+              </a>
+          </li>
+        </ul>
+
+  </div>  <!-- END OF SIDEBAR CONTAINER -->
+</div>  <!-- END OF USER DATA SIDEBAR -->  

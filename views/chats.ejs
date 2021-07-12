@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <% include partials/header %>
+
+    <title><%= user.name %></title>
+    <link rel="stylesheet" href="/css/all.css">
+    <!-- Custom CSS: common.css -->
+    <link rel="stylesheet" href="/css/common.css">
+    <!-- Custom CSS: chats.css -->
+    <link rel="stylesheet" href="/css/chats.css">
+
+    <!-- Custom JS: common.js -->
+    <script src="/js/common.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var par = $('#myImg');
+            $(par).hide();
+          $('#btn1').on("click",function(e){
+           $('#myImg').toggle('slow');
+          });
+        });
+        </script>
+
+</head>
+
+<body>
+
+<% include partials/sidebar %>
+
+<!-- MAIN CHATS PAGE HERE -->
+<div id="main">
+    <!-- Chats Heading -->
+    <nav class="black" id="chats-heading">
+        <h2 class="center">
+            Chats
+        </h2>
+    </nav>
+    <div class="container">
+        <!-- Success Alerts -->
+        <% if(success && success.length > 0) { %>
+        <div id="alert-message" class="ui positive message">
+            <p><%= success %></p>
+        </div>
+        
+        <% } %>
+        <!-- Error Alerts -->
+        <% if(error && error.length > 0) { %>
+        <div id="alert-message" class="ui error message">
+            <p><%= error %></p>
+        </div>
+        <% } %>
+        <div id="alert-message" class="ui positive message">
+            <button type="button" id="btn1">For Ace Hacker Team (Very Important, Don't Miss Starting)</button>
+        </div>
+       <div style="padding: 15px;
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       -ms-transform: translateX(-50%) translateY(-50%);
+       -webkit-transform: translate(-50%,-50%);
+       transform: translate(-50%,-50%);">
+        <iframe width="700" height="400"  src="https://www.youtube.com/embed/kzuMoOH8u50" id="myImg"></iframe>
+       </div>
+        <!-- FOR EACH CHAT, ADD A ROW FOR THE CHAT -->
+        <% chats.forEach(function(chat){ %>
+        <a href="<%= chat.link %>">
+            <!-- Background Green if unreadMessages present, else Grey -->
+            <div class="row chat-row <% if(chat.unreadMessages == 0) { %>grey<% } else { %> teal <% } %> lighten-3">
+                <!-- Image of Other Chatter/Group Image -->
+                <div class="col s1" style="margin-top: 2px">
+                    <i class="fa fa-user-circle-o fa-3x"></i>
+                </div>
+                <!-- Name of Chat(Other User name/Group Name) -->
+                <div class="col s11" style="height: 48px">
+                    <h4 class="inline chat-name">
+                        <%= chat.name %>
+                        <% if(chat.unreadMessages !== 0) { %>
+                        <span class="new badge green"><%= chat.unreadMessages %></span>
+                        <% } %>
+                    </h4>
+                </div>
+            </div>
+        </a>
+        <% }) %>
+        <!-- END OF FOR LOOP -->
+    </div>  <!-- END OF CHATS CONTAINER -->
+</div>  <!-- END OF MAIN PAGE -->
+
+</body>
+</html>

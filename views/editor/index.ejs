@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <% include ../partials/header %>
+
+    <title><%= user.name.toUpperCase() %></title>
+
+    <!-- Custom CSS: common.css -->
+    <link rel="stylesheet" href="/css/common.css">
+    <!-- Custom CSS: chats.css -->
+    <link rel="stylesheet" href="/css/compiler.css">
+
+    <!-- Custom JS: common.js -->
+    <script src="/js/common.js"></script>
+
+
+</head>
+
+<body onunload="updateDatabase()">
+
+<% include ../partials/sidebar %>
+
+<!-- MAIN CHATS PAGE HERE -->
+<div id="main">
+
+	<nav class="black" id="chats-heading" style="margin-bottom: 20px">
+        <h3 class="center" id="chat-heading">
+        	Editor
+
+            <!-- ICON FOR Details -->
+            <!--<a href="/compiler/details"  id="details-icon" class="right">
+                <i class="fa fa-info-circle tooltipped" data-position="left" data-tooltip="details"></i>
+            </a>-->
+        </h3>
+    </nav>
+
+    <div>
+    	<% include ../partials/compiler %>
+    </div>
+
+</div>
+
+</body>
+</html>

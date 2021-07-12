@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <% include ../partials/header %>
+
+    <title><%= title %></title>
+
+    <!-- Custom CSS: common.css -->
+    <link rel="stylesheet" href="/css/common.css">
+    <!-- Custom CSS: chats.css -->
+    <link rel="stylesheet" href="/css/chat.css">
+
+    <!-- Socket io -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- Custom JS: common.js -->
+    <script src="/js/common.js"></script>
+    <!-- Custom JS: chat.js -->
+    <script src="/js/chat.js"></script>
+    <script src='https://meet.jit.si/external_api.js'></script>
+    <script>
+    
+    </script>
+
+</head>
+<body>
+
+<% include ../partials/sidebar %>
+<link rel="stylesheet" href="/css/all.css">
+<!-- MAIN CHAT PAGE HERE -->
+<div id="main">
+    <!-- Chats Heading: Username of Receiver -->
+    <nav class="black" id="chats-heading" style="margin-bottom: 10px">
+        <h3 class="center" id="chat-heading">
+            <%= title %>
+
+            <!-- ICON FOR Details -->
+            <!--<a href="/chats/<%= chatId %>"  id="details-icon" class="right">
+                <i class="fa fa-info-circle tooltipped" data-position="left" data-tooltip="chat details"></i>
+            </a>-->
+        </h3>
+    </nav>
+
+    <!-- Chat Box -->
+    <div id="chat-box" style="height: 90vh">
+
+        <div class="row" style="margin-bottom: 0;height: 90vh; padding: 15px">
+            <!-- Input Container: Chat input and Send button -->
+            <div class="col s8" style="height: 100%; padding-right: 15px">
+                <% include ../partials/compiler %>
+            </div>
+            <!-- Message Display Container -->
+            <div class="col s4" style="height: 100%; padding-left: 15px">
+                <div id='meet'></div>
+            </div>
+            </div>
+        </div>
+    </div>  <!-- End of Chat Box -->
+
+</div>  <!-- END OF MAIN PAGE -->
+
+
+</body>
+</html>

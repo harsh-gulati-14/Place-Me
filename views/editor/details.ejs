@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <% include ../partials/header %>
+
+    <title><%= user.username %></title>
+
+    <!-- Custom CSS: common.css -->
+    <link rel="stylesheet" href="/css/common.css">
+    <!-- Custom CSS: group.css -->
+    <link rel="stylesheet" href="/css/chat.css">
+
+    <!-- Custom JS: common.js -->
+    <script src="/js/common.js"></script>
+
+</head>
+<body>
+
+<% include ../partials/sidebar %>
+
+<!-- MAIN CHAT PAGE HERE -->
+<div id="main">
+    <!-- Chats Heading: Group Name -->
+    <nav class=" black" id="chats-heading" style="margin-bottom: 20px">
+        <h3 class="center" id="chat-heading">
+
+            Details
+
+            <!-- ICON FOR Chat -->
+            <a href="/compiler" id="chat-icon" class="right">
+                <i class="fa fa-commenting-o tooltipped" data-position="left" data-tooltip="back to editor"></i>
+            </a>
+        </h3>
+    </nav>
+
+    <div class="container">
+        <table class="highlight centered">
+            <tbody>
+            <% user.compiledCodes.forEach(link => { %>
+                <tr style="border: 1px solid #d0d0d0;">
+                    <td><a href="<%= link %>" style="color: #039be5" ><%= link %></a></td>
+                </tr>
+            <% }) %>
+            </tbody>
+        </table>
+    </div>
+
+</div>  <!-- END OF MAIN PAGE -->
+
+
+</body>
+</html>

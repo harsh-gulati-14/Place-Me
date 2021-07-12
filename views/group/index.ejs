@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <% include ../partials/header %>
+
+    <title><%= title %></title>
+
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/chat.css">
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/group.js"></script>
+
+</head>
+<body>
+
+<% include ../partials/sidebar %>
+
+<!-- MAIN CHAT PAGE HERE -->
+<div id="main">
+    <!-- Chats Heading: Username of Receiver -->
+    <nav class="black" id="chats-heading" style="margin-bottom: 10px">
+        <h3 class="center" id="chat-heading">
+
+            <%= title %>
+
+            <!-- ICON FOR Details -->
+            <a href="/groups/<%= groupId %>"  id="details-icon" class="right">
+                <i class="fa fa-info-circle tooltipped" data-position="left" data-tooltip="group details"></i>
+            </a>
+        </h3>
+    </nav>
+
+    <!-- Chat Box -->
+    <div id="chat-box" style="height: 90vh">
+
+        <div class="row" style="margin-bottom: 0;height: 90vh; padding: 15px">
+            <!-- Input Container: Chat input and Send button -->
+            <div class="col s8" style="height: 100%; padding-right: 15px">
+                <% include ../partials/compiler %>
+            </div>
+            <!-- Message Display Container -->
+            <div class="col s4" style="height: 100%; padding-left: 15px">
+                <div class=" z-depth-1" style="height: 100%">
+                <div class="container grey lighten-4" id="messages-container" style="margin: 0; width: 100%; padding: 10px; height: 92%">
+                    <ul id="messages-list" style="margin : 0">
+                        <!-- List Items to be added by chat.js -->
+                    </ul>
+                </div>
+                <!-- Input Container: Chat input and Send button -->
+                <div id="message-box" class="container" style="height: 8%">
+                    <div class="row" style="margin-bottom: 0;">
+                        <!-- Input Box -->
+                        <div class="col s9" style="padding: 7px">
+                            <div class="input-box grey lighten-1" style="padding: 0 10px;/* border: 1px solid #4db6ac*/">
+                                <input id="message-input" class=""  type="text">
+                            </div>
+                        </div>
+                        <!-- Send Button -->
+                        <div class="col s3" style="padding-left: 0; padding-right: 7px">
+                            <button id="send-button" class="btn btn-block" style="width: 100%; text-align: center">Send</button>
+                            <button id="ChangeOutput" style="display: hidden"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>  <!-- End of Chat Box -->
+
+</div>  <!-- END OF MAIN PAGE -->
+
+
+</body>
+</html>

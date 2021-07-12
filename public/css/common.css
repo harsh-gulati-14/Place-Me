@@ -1,0 +1,138 @@
+/* CHANGE PAGE FONT TO LOBSTER */
+body {
+    /*font-family:'Lobster', cursive;*/
+    font-family: 'PT Serif', serif;
+    height: 750;
+}
+
+/* REMOVE TEXT DECORATION AND COLOR CHANGE OF ALL a TAGS */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.user-view {
+    height: 200px;
+}
+
+textarea {
+    overflow-y: scroll;
+    resize: none;
+    outline: none;
+    padding: 0;
+    border: 0;
+}
+
+/*Editor */
+.ace_editor {
+    width: 100%;
+}
+
+#my-xml-editor {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1000px;
+}
+
+.tabs .tab a{
+  color:#616161;
+  background-color: #fff;
+} 
+
+.tabs .indicator {
+    background-color:#616161;
+} /*Color of underline*/
+
+.tabs .tab a:hover {
+    background-color:#9e9e9e;
+    color:#fff;
+} /*Text color on hover*/
+
+.tabs .tab a.active {
+  background-color:#fff;
+  color:#000;
+} /*Background and text color when a tab is active*/
+
+/* SIDEBAR CONTAINING USER INFO */
+.side-nav-button {
+    z-index: 102;
+    top: 5px;
+}
+
+#sidebar-nav {
+    position: absolute;
+    top: 10px;
+    width: 44px;
+    height: 44px;
+    z-index: 700;
+    background-color: #333332;
+    border: 0;
+    font-size: 28px;
+    text-align: center;
+    color: #fff;
+    left: 10px;
+    opacity: 1;
+}
+
+#profile-sidebar {
+    font-family: 'Roboto Condensed', sans-serif;
+    width:15% !important;
+    height:100%;
+}
+
+/*Make Sidebar width 70% except on Large Screens */
+@media only screen and (max-width: 992px) {
+    #profile-sidebar {
+        width: 50% !important;
+    }
+}
+
+/* CHANGE FONT SIZE OF CHITCHAT HEADING */
+#chitchat-heading {
+    font-size: 3em;
+}
+
+/* ALL NAVIGATION BUTTONS */
+.btn.btn-block {
+    text-transform: none;   /* Remove Upper Case Text Transform from buttons */
+    font-size: 1em;
+    margin: 8px auto;
+}
+
+/* Remove Padding on Small Screens */
+@media only screen and (max-width: 992px) {
+    #main {
+        padding-left: 0;
+    }
+}
+
+#profile-collapse {
+    margin:5px;
+}
+
+/* BORDERED PAGE HEADING */
+#round-heading {
+    border-radius: 10px;
+    margin-top:10px;
+}
+
+/* ADDING MARGIN TOP TO ALERTS */
+#alert-message {
+    margin-top: 10px;
+}
+
+#message-input {
+    margin-bottom: 0;
+    height: 5vh;
+    border: none;
+}
+
+#message-input:focus {
+    outline: none;
+    border: none;
+}
+

@@ -1,0 +1,67 @@
+<div style="width: 100%; height: 100%; display: none" id="block" class="teal lighten-4 container z-depth-1">
+    <div class="container" style="padding: 300px 100px">
+        <div id="alert-message " class="compile-username ui center-align error message orange-text">
+        </div>
+        <div class="progress">
+          <div class="indeterminate"></div>
+        </div>
+    </div>
+</div>
+
+<div id="link" style="display: none">
+</div>
+
+<div style="width: 100%; background-color: white; height: 100%;" class="container z-depth-1" id="unblock">
+    <textarea name="my-xml-editor" style=" height: 58vh ;width: 100%; padding: 0; border: 0;display: none;" id="codebox" data-editor="javascript" rows="100"></textarea>
+
+    <div class="card" style=" margin: 0; height: 20vh">
+        <div class="row" style="margin-bottom: 0; height: 5vh">
+            <div class="card-tabs col s6" style="padding: 0;height: 5vh">
+                <ul class="tabs tabs-fixed-width" style="height: 5vh">
+                    <li class="tab" style="height: 5vh"><a id="ip" class="active" href="#inputbox" style="line-height: 38px;">Input</a></li>
+                    <li class="tab" style="height: 5vh"><a id="op" href="#outputbox" style="line-height: 38px;">Output</a></li>
+                </ul>
+            </div>
+            <div class="col s6" style="height: 5vh">
+                <button id="ClearOutput" class="btn btn-block white right" style="color: blue; box-shadow: none; -webkit-box-shadow: none; height: 5vh; margin: 0">clear the output</button>
+            </div>
+        </div>
+        <div class="card-content grey lighten-4" style="padding: 0;height: 16vh">
+            <textarea id="inputbox" placeholder="Enter Input" style=" border: 0; padding: 5px; height: 100%"></textarea>
+            <div id="outputbox" style="padding: 5px;overflow-y: scroll; height: 100%"></div>
+        </div>
+    </div>
+                    
+    <div class="row white" style="margin-bottom: 0; height: 8vh; padding: 5px">
+        <div class="col s6 row" style="margin-top: 5px; margin-bottom: 5px;">
+            <select class='col s6' name="lang" id="lang" style="display: block; padding: 0;">
+                <option value="C">C (gcc 5.4.0)</option>
+                <option value="CPP11">C++11 (g++ 5.4.0)</option>
+                <option value="JAVA">Java (openjdk 1.7.0_95)</option>
+                <option value="CSHARP">C# (mcs 5.4.0.201)</option>
+                <option value="HASKELL">Haskell (ghc 7.10.3)</option>
+                <option value="CLOJURE">Clojure (clojure 1.6.0)</option>
+                <option value="PYTHON">Python (python 2.7.6)</option>
+                <option value="RUBY">Ruby (ruby 2.3.1)</option>
+                <option value="PHP">PHP (php 7.0.18)</option>
+                <option value="JAVASCRIPT">JavaScript (Rhino 1.7)</option>
+                <option value="PERL">Perl (perl 5.22.1)</option>
+                <option value="CPP">C++ (g++ 5.4.0)</option>
+            </select>
+            <button id="template" class="col s6 btn btn-block" style="  margin-top: 5px; padding:0px">
+                    Get Template
+            </button>
+        </div>
+        <div class="col s2" style="margin-top: 5px; margin-bottom: 5px;">
+            <select name="theme" id="theme" style="display: block; padding: 0;">
+                <option>twilight</option>
+                <option>monokai</option>
+                <option>terminal</option>
+                <option>chaos</option>
+                <option>chrome</option>
+                <option selected="selected">clouds</option>
+            </select>
+        </div>
+        <div class="col s4"><button id="compile" class="btn btn-block" style="width: 100%;  margin-top: 10px">Compile and Run</button></div>
+    </div>              
+</div>

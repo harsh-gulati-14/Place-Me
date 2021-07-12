@@ -1,0 +1,10 @@
+/* FIX CHAT HEADING TO TOP */
+#chat-heading {
+    margin: 0;
+    height: 65px;
+    margin-bottom: 10px;
+}
+
+#chat-heading {
+	padding-top: 7px;
+}

@@ -1,0 +1,34 @@
+/* FIX CHAT HEADING TO TOP */
+#chat-heading {
+    margin: 0;
+    height: 65px;
+    margin-bottom: 10px;
+}
+
+#chat-heading {
+  padding-top: 7px;
+}
+
+/* LIMIT MESSAGES CONTAINER TO FIXED HEIGHT ALLOWING SCROLLING OF MESSAGES */
+#messages-container {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    height: 83vh;
+    word-wrap: break-word;
+    overflow-y: scroll;
+}
+
+#message-box {
+    margin: 0;
+    width: 100%;
+}
+
+#typing {
+    color:blue;
+}
+
+#details-icon {
+    font-size: 2rem;
+    padding-right: 10px;
+}
+
