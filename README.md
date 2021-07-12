@@ -34,3 +34,48 @@ These are the groups/institute that can use/implement this tool according to the
 ![News Section](/images/erd.JPG?raw=true "ERD")
 # :round_pushpin: Architecture Diagram
 ![News Section](/images/client.png?raw=true "Architecture")
+
+
+## TECH STACK
+#### FRONTEND
+:heavy_check_mark: Simplified using HTML, CSS, JS
+### BACKEND
+:heavy_check_mark: Written in ExpressJS framework and templates
+
+:heavy_check_mark: Powered by NodeJS
+
+:heavy_check_mark: Supported by socket.io
+
+:heavy_check_mark: Video Calling integrated with JITSI Api
+
+:heavy_check_mark: Enhanced by ACE editor open sourced JS editor 
+
+# RUN THE PROJECT 
+### Usage
+```sh
+> git clone <repo link>
+$ npm init
+$ npm install
+$ node app.js
+# Open http://localhost:3000 on your browser
+```
+# :bulb: DEMO
+
+## [Youtube Video](https://www.youtube.com/watch?v=kzuMoOH8u50&t=7s)
+
+# :paperclips: Project Hosted 
+
+## [Place Me](https://place-me-harshgulati.herokuapp.com/)
+
+# :clap: Connect with Me
+
+### Harsh Gulati
+
+### harshgulati1409@gmail.com
+
+### 9953961096
+
+### [Linkedin](https://www.linkedin.com/in/harsh-gulati-005585ab/)
+
+
+
