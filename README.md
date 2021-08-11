@@ -1,18 +1,8 @@
 
-# :round_pushpin: Challenge
-
-Build a Microsoft Teams clone
-Your solution should be a fully functional prototype with at least one mandatory functionality - a minimum of two participants should be able connect with each other using your product to have a video conversation.
-
-# :round_pushpin: The Method
-Agile development is a mindset whose values and principles provide guidance on how to create and respond to change and how to deal with uncertainty.
-
-### Sprints
-During the Requirements Parts by gathering the information of MS Teams and it's working, I divided the process in 3 Sprints each of single week.
-1. 20th June - 27th June : Detailed Design and wireframing the API.
-2. 28th June - 5th Juy   : Code Implementation and adjusting the adapt requirement.
-3. 5th July - 12the July : Imporving UI, Testing on local systems, genrating test cases and documentation.
-
+# :round_pushpin: PlaceMe
+It is an online code editor that lets people collaborate in real-time. It allows group as well as personal
+collaborations with other users providing a shared editor screen along with a peer to peer video conversation and message
+chatting. The main motivation for this project is to elaborate peer coding even in online era.
 # :round_pushpin: Stakeholders
 ## Internal Users 
 ### :arrow_right: Software Team: 
