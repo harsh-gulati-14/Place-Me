@@ -1,4 +1,4 @@
-# :pencil: Microsoft Engage 2021 Submission
+
 # :round_pushpin: Challenge
 
 Build a Microsoft Teams clone
@@ -58,10 +58,6 @@ $ npm install
 $ node app.js
 # Open http://localhost:3000 on your browser
 ```
-# :bulb: DEMO
-
-## [Youtube Video](https://www.youtube.com/watch?v=kzuMoOH8u50&t=7s)
-
 # :paperclips: Project Hosted 
 
 ## [Place Me](https://place-me-harshgulati.herokuapp.com/)
